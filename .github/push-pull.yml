@@ -5,7 +5,7 @@ on:
       - master
       - hamada
     paths:
-      - '**.html'
+      - '*.html'
 
   pull_request:
     branches:
