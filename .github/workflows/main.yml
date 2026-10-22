@@ -1,0 +1,14 @@
+name: vc
+
+on:
+  push:
+    branches:
+      - master
+
+jobs:
+  ex-job:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Print a welcome message
+        run: echo "Welcome to our first GitHub Actions Workflow!"
