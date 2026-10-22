@@ -1,0 +1,24 @@
+# trigger workflow on push and pull request events to the master branch
+on:
+  push:
+    branches:
+      - master
+      - hamada
+    paths:
+      - '**.html'
+
+  pull_request:
+    branches:
+      - master
+      - hamada
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    # list of maps
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v2.8.0
+      
+      - name: Run tests
+        run: npm tests
